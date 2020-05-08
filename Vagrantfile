@@ -5,7 +5,6 @@ Vagrant.configure("2") do |config|
   config.vm.provider "parallels" do |prl|
     prl.cpus = "1"
     prl.memory = "4096"
-    prl.customize ["set", :id, "--device-del", "sound0"]
   end
 #  config.vm.provision "shell", inline: "yum install epel-release -y;yum install ansible -y"
   config.vm.provision "shell", inline: "apt-add-repository --yes --update ppa:ansible/ansible;apt install ansible -y"
